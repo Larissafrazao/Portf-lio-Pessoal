@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas e link para o CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Larissa | Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu fixo no topo com navegação por âncoras -->
+    <header>
+        <nav>
+            <h2>&lt;dev.larissa/&gt;</h2>
+            <ul>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button id="theme-toggle">🌙 Tema Escuro</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção 1: Sobre mim -->
+        <section id="sobre" class="hero">
+            <div class="hero-text">
+                <h1>Olá, eu sou a Larissa Frazão!👋</h1>
+                <p>
+
+Moro no Rio de Janeiro e tenho 27 anos. Sou estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e tenho interesse em transformar ideias em soluções digitais funcionais e criativas.<br>
+<br>
+Gosto de trabalhar com <strong>Lógica de programação, desenvolvimento de jogos educacionais e criação de interfaces</strong>, buscando sempre unir tecnologia, usabilidade e criatividade. Tenho interesse em explorar diferentes tecnologias e aprimorar continuamente minhas habilidades no desenvolvimento de aplicações.<br>
+<br>
+Acredito que programar vai além de escrever código: é encontrar soluções para problemas, transformar ideias em experiências e criar ferramentas que possam fazer a diferença para as pessoas.
+</p>
+                <!-- Botão opcional para chamar para a ação -->
+                <a href="#portfolio" class="btn">Ver meus trabalhos</a>
+            </div>
+            <div class="hero-img">
+                <!-- Coloque o nome do arquivo da sua foto no atributo src -->
+                <img src="minhafoto.jpg" alt="Foto de Larissa" class="profile-pic">
+            </div>
+        </section>
+       
+
+        <!-- Seção 2: Formação (Novo) -->
+        <section id="formacao">
+            <h2>Minha Formação</h2>
+            <div class="card">
+                <h3>Centro Universitário UNINTER — Análise e Desenvolvimento de Sistemas</h3>
+                <p>Cursando</p>
+                <p>Foco em algoritmos, programação web e desenvolvimento de software.</p>
+                <br>
+                <h3>Inglês — UNINTER</h3>
+                <p>Cursando</p>
+                <br>
+                <h3>Curso Básico de Administração</h3>
+                <p>Concluído.</p>
+                <br>
+                <h3>Curso Intermediário de Pacote Office</h3>
+                <p>Concluído</p>
+                <br>
+                <h3>Ensino Médio</h3>
+                <p>Concluído</p>
+
+            </div>
+        </section>
+
+        <!-- Seção 3: Portfólio -->
+        <section id="portfolio">
+            <h2>Portfólio</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Joquinho bíblico</h3>
+                    <p>Jogo educativo baseado em perguntas e respostas sobre conhecimentos bíblicos. O projeto busca tornar o aprendizado mais interativo e divertido, utilizando elementos de jogos para estimular a participação do usuário.
+                        <br>             
+<strong> Tecnologias: HTML, CSS e JavaScript.</strong> 
+    <br>
+    <a href="https://github.com/Larissafrazao/Jogobiblico" target="_blank">
+    Ver projeto no GitHub
+</a>
+<br>
+</p>
+                </div>
+                <div class="card">
+                    <h3>Jogo 2D em Python</h3>
+                    <p>Desenvolvimento com Pygame, com foco em colisão e animações de sprites.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Contato com Formulário -->
+        <section id="contato">
+            <h2>Contato</h2>
+            <!-- Formulário para simulação de envio -->
+            <form id="form-contato">
+                <div class="input-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" placeholder="Seu nome">
+                </div>
+                
+                <div class="input-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" placeholder="usuario@dominio.com">
+                </div>
+
+                <div class="input-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" rows="4" placeholder="Sua mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Conexão com o arquivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
