@@ -117,7 +117,7 @@ section > h2 {
 .profile-pic {
     width: 300px;
     height: 300px;
-    border-radius: 50%; /* Faz a imagem ficar perfeitamente redonda */
+    border-radius: 50%; /* Faz a imagem ficar redonda */
     object-fit: cover; /* Garante que a foto não fique esticada ou achatada */
     border: 6px solid var(--primary-color); /* Borda grossa com a cor principal */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Sombra moderna */
@@ -143,4 +143,133 @@ section > h2 {
     .hero-text h1 {
         font-size: 2.5rem;
     }
+}
+/* =========================================
+   ESTILOS DOS CARDS (Formação e Portfólio)
+   ========================================= */
+.grid {
+    display: grid;
+    /* Mágica do Grid: cria colunas responsivas automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    border-top: 4px solid var(--primary-color); /* Detalhe de cor no topo */
+}
+
+/* Efeito ao passar o mouse no card */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.card p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ajuste de cor para o texto no Modo Escuro */
+.dark-mode .card p {
+    color: #ccc;
+}
+
+/* Estilo específico para a lista de cursos na Formação */
+.lista-cursos {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+.lista-cursos li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    color: var(--text-color);
+}
+
+.lista-cursos li:last-child {
+    border-bottom: none; /* Tira a linha do último item */
+}
+
+.dark-mode .lista-cursos li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+/*
+   ESTILOS DO FORMULÁRIO (Contato)
+   ========================================= */
+#contato {
+    align-items: center; /* Centraliza o formulário na tela */
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.input-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+input, textarea {
+    padding: 15px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: var(--transition);
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical; /* Permite aumentar apenas para baixo, não para os lados */
+    min-height: 120px;
+}
+
+/* Efeito ao clicar no campo (Foco) */
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(108, 92, 231, 0.2); /* Brilho ao redor do input */
+}
+
+/* Bordas suaves no Modo Escuro */
+.dark-mode input, .dark-mode textarea {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Ajuste no botão dentro do formulário para ficar grandão */
+form .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
